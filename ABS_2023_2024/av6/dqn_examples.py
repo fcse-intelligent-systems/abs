@@ -9,7 +9,7 @@ def build_model(state_space_shape, num_actions):
     model = Sequential()
     model.add(Dense(16, input_shape=state_space_shape))
     model.add(Dense(16))
-    model.add(Dense(num_actions, activation='lineart'))
+    model.add(Dense(num_actions, activation='linear'))
 
     model.compile(SGD(0.001), mean_squared_error)
 
